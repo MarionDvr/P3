@@ -2,35 +2,41 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
-        <link rel="stylesheet" href="styles.css" /> 
+        <link rel="stylesheet" href="../css/style.css" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title></title>
     </head>
     <body>
         <header>
             <a href="#">
-                <div><i class="fa-solid fa-arrow-left"></i></div>
+                <div class="header__fleche"><i class="fa-solid fa-arrow-left fleche"></i></div>
             </a>
             <figure>
-                <img src="../images/logo/ohmyfood.png" alt="Logo Ohmyfood"/>
+                <img src="../images/logo/ohmyfood.png" alt="Logo Ohmyfood" class="__logo"/>
             </figure>
         </header>
         <main>
-            <figure>
-                <img src="../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo d'assiètes du restaurant À la française" />
+            <figure class="imgRestaurant">
+                <img src="../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo d'assiètes du restaurant À la française" class="imgRestaurant__photo" />
             </figure>
-            <section>
-                <div>
-                    <h2>Le délice des sens</h2>
+            <section class="Menu">
+                <div class="Menu__NomRestaurant">
+                    <div>
+                        <h2>Le délice des sens</h2>
+                    </div>
+                    <div class="bntCoeur">
+                        <a href="">
+                            <div><i class="fa-thin fa-heart"></i></div>
+                        </a>
+                        <a href="">
+                            <div><i class="fa-solid fa-heart"></i></div>
+                        </a>
+                    </div>
                 </div>
-                <div>
-                    <button type="button"><i class="fa-thin fa-heart"></i></button>
-                    <button type="button"><i class="fa-solid fa-heart"></i></button>
-                </div>
-                <article>
+                <article class="PlatsAChoisir">
                     <h3> ENTRÉES</h3>
-                    <a href=""> 
-                        <div>
+                    <a href="" class="PlatsAChoisir__lien"> 
+                        <div class="PlatsAChoisir__Plat">
                             <div>
                                 <h3>Tartare de thon</h3>
                                 <p>Assaisonné au yuzu</p>
@@ -39,8 +45,8 @@
                             <div><i class="fa-solid fa-circle-check"></i></div>
                         </div>
                     </a>
-                    <a href="">
-                        <div>
+                    <a href="" class="PlatsAChoisir__lien">
+                        <div class="PlatsAChoisir__Plat">
                             <div>
                                 <h3>Bouchée de homard croustillant</h3>
                                 <p>Et sa farandole de petits légumes</p>
@@ -49,21 +55,22 @@
                             <div><i class="fa-solid fa-circle-check"></i></div>
                         </div>
                     </a>
-                    <a href="">
-                        <div>
+                    <a href="" class="PlatsAChoisir__lien">
+                        <div class="PlatsAChoisir__Plat">
                             <div>
                                 <h3>Velouté de cèpes</h3>
                                 <p>Aux truffes</p>
                                 <p>20€</p>
+                                
                             </div>
                             <div><i class="fa-solid fa-circle-check"></i></div>
                         </div>
                     </a>
                 </article>
-                <article>
+                <article class="PlatsAChoisir">
                     <h3> PLATS</h3>
-                    <a href="">
-                        <div>
+                    <a href="" class="PlatsAChoisir__lien">
+                        <div class="PlatsAChoisir__Plat">
                             <div>
                                 <h3>Poulet rôti aux herbes de Provence</h3>
                                 <p>Et sa crème de truffe</p>
@@ -72,8 +79,8 @@
                             <div><i class="fa-solid fa-circle-check"></i></div>
                         </div>
                     </a>
-                    <a href="">
-                        <div>
+                    <a href="" class="PlatsAChoisir__lien">
+                        <div class="PlatsAChoisir__Plat">
                             <div>
                                 <h3>Langouste rôtie</h3>
                                 <p>Et ses légumes de saison</p>
@@ -82,8 +89,8 @@
                             <div><i class="fa-solid fa-circle-check"></i></div>
                         </div>
                     </a>
-                    <a href="">
-                        <div>
+                    <a href="" class="PlatsAChoisir__lien">
+                        <div class="PlatsAChoisir__Plat">
                             <div>
                                 <h3>Côte de boeuf Angus</h3>
                                 <p>Et sa purée de panais</p>
@@ -93,10 +100,10 @@
                         </div>
                     </a>
                 </article>
-                <article>
+                <article class="PlatsAChoisir">
                     <h3> DESSERTS</h3>
-                    <a href="">
-                        <div>
+                    <a href="" class="PlatsAChoisir__lien">
+                        <div class="PlatsAChoisir__Plat">
                             <div>
                                 <h3>Farandole de desserts</h3>
                                 <p>Du chef</p>
@@ -105,8 +112,8 @@
                             <div><i class="fa-solid fa-circle-check"></i></div>
                         </div>
                     </a>
-                    <a href="">
-                        <div>
+                    <a href="" class="PlatsAChoisir__lien">
+                        <div class="PlatsAChoisir__Plat">
                             <div>
                                 <h3>Crème brulée </h3>
                                 <p>Revisitée</p>
@@ -115,8 +122,8 @@
                             <div><i class="fa-solid fa-circle-check"></i></div>
                         </div>
                     </a>
-                    <a href="">
-                        <div>
+                    <a href="" class="PlatsAChoisir__lien">
+                        <div class="PlatsAChoisir__Plat">
                             <div>
                                 <h3>Tiramisu</h3>
                                 <p>À la noisette</p>
@@ -125,8 +132,8 @@
                             <div><i class="fa-solid fa-circle-check"></i></div>
                         </div>
                     </a>
-                <article>
-                <button type="button">Commander</button>
+                </article>
+                <button type="button" class="btn">Commander</button>
             </section>
         </main>
         <footer>

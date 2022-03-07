@@ -1,0 +1,215 @@
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../font/Shrikhand/Shrikhand-Regular.ttf");
+  font-family: "Roboto";
+  src: url("../font/Roboto/Roboto-Regular.ttf");
+}
+/* Variables */
+/* listes */
+/* mixin */
+/* fonction */
+body {
+  font-family: "Roboto";
+  color: #353535;
+}
+
+h1, h2, h3 {
+  font-family: "Shrikhand";
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  /* header */
+  header {
+    box-shadow: 0px 6px 10px -7px #979696;
+    display: flex;
+    justify-content: center;
+  }
+  header figure {
+    padding-top: 20px;
+    padding-bottom: 15px;
+    margin: 0;
+  }
+  header figure .__logo {
+    width: 200px;
+  }
+
+  /* localisation */
+  .localisation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #494848;
+    background: #eaeaea;
+  }
+  .localisation p {
+    margin-left: 10px;
+  }
+
+  .Reservez {
+    margin: 0;
+    background: #f6f6f6;
+    text-align: center;
+    padding: 20px 10px 20px 10px;
+  }
+  .Reservez h1 {
+    font-family: "Shrikhand";
+  }
+  .Reservez p {
+    font-weight: lighter;
+  }
+  .Reservez .btn {
+    background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    color: white;
+    padding: 20px 30px 20px 30px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 2px 10px #a1a1a1;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  /* Fonctionnement */
+  .Fonctionnement {
+    padding: 30px 20px 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .Fonctionnement__etapes {
+    background: #f6f6f6;
+    box-shadow: -1px 3px 15px #d6d6d6;
+    border-radius: 30px;
+    font-weight: bold;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .Fonctionnement__etapes__nbr {
+    background: #9356DC;
+    border-radius: 30px 30px 30px 30px;
+    color: white;
+    padding: 6px;
+    width: 20px;
+    text-align: center;
+  }
+
+  /* Restaurants */
+  .Restaurants {
+    background: #f6f6f6;
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+  .Restaurants h2 {
+    padding-left: 20px;
+  }
+  .Restaurants__Englobe {
+    margin: 0 20px 0 20px;
+  }
+  .Restaurants__Englobe__lien {
+    text-decoration: none;
+    color: black;
+  }
+  .Restaurants__Englobe .ChoixRestaurant {
+    width: 100%;
+    border-radius: 20px;
+    background: white;
+    box-shadow: -1px 3px 15px #d6d6d6;
+    margin: 0 0 20px 0;
+  }
+  .Restaurants__Englobe .ChoixRestaurant__img {
+    width: 100%;
+    height: 180px;
+    border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
+  }
+  .Restaurants__Englobe .ChoixRestaurant__Figcap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 20px;
+    line-height: 6px;
+  }
+
+  .CoeurVide {
+    display: block;
+  }
+  .CoeurPlein {
+    display: none;
+  }
+
+  .Coeur a:hoverVide, .Coeur a:activeVide {
+    display: none;
+  }
+  .Coeur a:hoverPlein, .Coeur a:activePlein {
+    display: block;
+    color: linear-gradient(to top, #9356DC, #FF79DA);
+  }
+
+  /* footer */
+  footer {
+    background: #353535;
+  }
+  footer__Englobe__Lien {
+    text-decoration: none;
+  }
+  footer__Englobe__Pictotexte {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* page restaurants */
+  .imgRestaurant {
+    width: 100%;
+    margin: 0;
+  }
+  .imgRestaurant__photo {
+    width: 100%;
+  }
+
+  .Menu {
+    width: 100%;
+    margin: 0;
+    padding: 20px 0px 20px 20px;
+    border-radius: 50px 50px 0px 0px;
+    background: #f6f6f6;
+  }
+  .Menu__NomRestaurant {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Menu .PlatsAChoisir {
+    width: 85%;
+    margin-bottom: 50px;
+  }
+  .Menu .PlatsAChoisir__lien {
+    text-decoration: none;
+    color: #353535;
+  }
+  .Menu .PlatsAChoisir__Plat {
+    background: white;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 10px 10px -10px #d3d1d1;
+    padding: 5px 15px 5px 15px;
+    margin-bottom: 20px;
+    line-height: 6px;
+  }
+  .Menu .btn {
+    background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    color: white;
+    padding: 20px 30px 20px 30px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 2px 10px #a1a1a1;
+    font-size: 18px;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

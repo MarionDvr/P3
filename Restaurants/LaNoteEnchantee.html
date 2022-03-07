@@ -1,36 +1,43 @@
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
-        <link rel="stylesheet" href="styles.css" /> 
+        <link rel="stylesheet" href="../css/style.css" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title></title>
     </head>
     <body>
         <header>
             <a href="#">
-                <div><i class="fa-solid fa-arrow-left"></i></div>
+                <div class="header__fleche"><i class="fa-solid fa-arrow-left fleche"></i></div>
             </a>
             <figure>
-                <img src="../images/logo/ohmyfood.png" alt="Logo Ohmyfood"/>
+                <img src="../images/logo/ohmyfood.png" alt="Logo Ohmyfood" class="__logo"/>
             </figure>
         </header>
         <main>
-            <figure>
-                <img src="../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo d'assiètes du restaurant La note enchantée" />
+            <figure class="imgRestaurant">
+                <img src="../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo d'assiètes du restaurant La note enchantée" class="imgRestaurant__photo"/>
             </figure>
-            <section>
-                <div>
-                    <h2>La note enchantée</h2>
+            <section class="Menu">
+                <div class="Menu__NomRestaurant">
+                    <div>
+                        <h2>La note enchantée</h2>
+                    </div>
+                    <div class="bntCoeur">
+                        <a href="">
+                            <div><i class="fa-thin fa-heart"></i></div>
+                        </a>
+                        <a href="">
+                            <div><i class="fa-solid fa-heart"></i></div>
+                        </a>
+                    </div>
                 </div>
-                <div>
-                    <button type="button"><i class="fa-thin fa-heart"></i></button>
-                    <button type="button"><i class="fa-solid fa-heart"></i></button>
-                </div>
-                <article>
+                <article class="PlatsAChoisir">
                     <h3> ENTRÉES</h3>
-                    <a href=""> 
-                        <div>
+                    <a href="" class="PlatsAChoisir__lien"> 
+                        <div class="PlatsAChoisir__Plat">
                             <div>
                                 <h3>Ravioles de foie gras</h3>
                                 <p>Accompagnés de leur crème à la truffe</p>
@@ -39,8 +46,8 @@
                             <div><i class="fa-solid fa-circle-check"></i></div>
                         </div>
                     </a>
-                    <a href="">
-                        <div>
+                    <a href="" class="PlatsAChoisir__lien">
+                        <div class="PlatsAChoisir__Plat">
                             <div>
                                 <h3>Caviar osciètre</h3>
                                 <p>Sur blini à la farine de blé noir</p>
@@ -49,8 +56,8 @@
                             <div><i class="fa-solid fa-circle-check"></i></div>
                         </div>
                     </a>
-                    <a href="">
-                        <div>
+                    <a href="" class="PlatsAChoisir__lien">
+                        <div class="PlatsAChoisir__Plat">
                             <div>
                                 <h3>Homard et espuma de potiron</h3>
                                 <p>Mariné aux zestes d'orange</p>
@@ -59,8 +66,8 @@
                             <div><i class="fa-solid fa-circle-check"></i></div>
                         </div>
                     </a>
-                    <a href="">
-                        <div>
+                    <a href="" class="PlatsAChoisir__lien">
+                        <div class="PlatsAChoisir__Plat">
                             <div>
                                 <h3>Foie gras de canard cuit entier</h3>
                                 <p>Confiture de figue et pain toasté</p>
@@ -70,10 +77,10 @@
                         </div>
                     </a>
                 </article>
-                <article>
+                <article class="PlatsAChoisir">
                     <h3> PLATS</h3>
-                    <a href="">
-                        <div>
+                    <a href="" class="PlatsAChoisir__lien">
+                        <div class="PlatsAChoisir__Plat">
                             <div>
                                 <h3>Noix de coquilles Saint-Jacques</h3>
                                 <p>Sur lit de purée de céleri-rave</p>
@@ -82,8 +89,8 @@
                             <div><i class="fa-solid fa-circle-check"></i></div>
                         </div>
                     </a>
-                    <a href="">
-                        <div>
+                    <a href="" class="PlatsAChoisir__lien">
+                        <div class="PlatsAChoisir__Plat">
                             <div>
                                 <h3>Langoustine poêlée</h3>
                                 <p>Purée de patate douce</p>
@@ -92,8 +99,8 @@
                             <div><i class="fa-solid fa-circle-check"></i></div>
                         </div>
                     </a>
-                    <a href="">
-                        <div>
+                    <a href="" class="PlatsAChoisir__lien">
+                        <div class="PlatsAChoisir__Plat">
                             <div>
                                 <h3>Mijoté de queue de boeuf</h3>
                                 <p>Et riz sauvage aux zestes de citron</p>
@@ -103,10 +110,10 @@
                         </div>
                     </a>
                 </article>
-                <article>
+                <article class="PlatsAChoisir">
                     <h3> DESSERTS</h3>
-                    <a href="">
-                        <div>
+                    <a href="" class="PlatsAChoisir__lien">
+                        <div class="PlatsAChoisir__Plat">
                             <div>
                                 <h3>Macaron noisette et chocolat</h3>
                                 <p>Glace au caramel brun et sel de Guérande</p>
@@ -115,8 +122,8 @@
                             <div><i class="fa-solid fa-circle-check"></i></div>
                         </div>
                     </a>
-                    <a href="">
-                        <div>
+                    <a href="" class="PlatsAChoisir__lien">
+                        <div class="PlatsAChoisir__Plat">
                             <div>
                                 <h3>Baba au rhum revisité</h3>
                                 <p>Avec son coulis de citron</p>
@@ -125,8 +132,8 @@
                             <div><i class="fa-solid fa-circle-check"></i></div>
                         </div>
                     </a>
-                    <a href="">
-                        <div>
+                    <a href="" class="PlatsAChoisir__lien">
+                        <div class="PlatsAChoisir__Plat">
                             <div>
                                 <h3>Tarte au citron meringuée</h3>
                                 <p>Déstructurée</p>
@@ -136,7 +143,7 @@
                         </div>
                     </a>
                 </article>
-                <button type="button">Commander</button>
+                <button type="button" class="btn">Commander</button>
             </section>
         </main>
         <footer>
