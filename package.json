@@ -1,0 +1,23 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "^c",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:css/style.css"
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarionDvr/P3.git"
+  },
+  "keywords": [
+    "ohmyfood"
+  ],
+  "author": "mariondvr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarionDvr/P3/issues"
+  },
+  "homepage": "https://github.com/MarionDvr/P3#readme"
+}
