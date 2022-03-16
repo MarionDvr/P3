@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'Shrikhand';
-    src: url('../font/Shrikhand/Shrikhand-Regular.ttf');
+    src: url('../fonts/Shrikhand/Shrikhand-Regular.ttf');
 }
 @font-face {
     font-family: 'Roboto';
-    src: url('../font/Roboto/Roboto-Regular.ttf');
+    src: url('../fonts/Roboto/Roboto-Regular.ttf');
 }
 
 /* Variables */
@@ -13,13 +13,15 @@ $couleur-secondaire: #FF79DA;
 $couleur-tertiaire: #99E2D0;
 $couleur-background: #f6f6f6;
 $couleur-textes: #353535;
-
-
+$Couleur-tertiaireDarken: darken($couleur-tertiaire,40%);
+$degrade: linear-gradient(to bottom right, $couleur-secondaire, $couleur-primaire);
+$lighten: 7%;
+$degradeLight: linear-gradient(to bottom right, lighten($couleur-secondaire, $lighten), lighten($couleur-primaire, $lighten));
 
 /* mixin */
 
 @mixin btn {
-    background: linear-gradient(to bottom right, $couleur-secondaire, $couleur-primaire);
+    background: $degrade;
     color: white;
     padding: 15px 25px 15px 25px;
     border-radius: 30px;
@@ -27,11 +29,43 @@ $couleur-textes: #353535;
     box-shadow: 0px 2px 10px #a1a1a1;
     font-size: 18px;
     cursor: pointer;
+    z-index: 1;
+    &:hover
+            {
+                background: $degradeLight;
+            }
 }
+
+/* Keyframe */
+
+@keyframes AfficherPlat {
+    0% {
+        opacity: 0;
+        transform: translateY(100%); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes ValidePlat {
+    0%{
+        transform: translate(0%);
+    }
+
+    100%{
+        transform: translate(-100%);
+    }
+    
+}
+
+
+
 
 body
 {
-    font-family: 'Roboto';
+    font-family: Roboto;
     color: $couleur-textes;
     margin: 0;
 }
@@ -142,6 +176,9 @@ h1, h2, h3
             @include btn;
             margin-top: 20px;
             margin-bottom: 30px;
+            position: relative;
+            
+              
         }
 
     }
@@ -153,7 +190,7 @@ h1, h2, h3
         padding: 30px;
         h2
         {
-            margin-left: 30px;
+            margin-left: 5%;
         }
         &__Englobe
         {   
@@ -226,10 +263,9 @@ h1, h2, h3
         background: $couleur-background;
         padding-top: 30px;
         padding-bottom: 40px;
-        
         h2 
         {
-           
+           margin-left: 7%;
         }
         &__Englobe
         {   
@@ -255,8 +291,9 @@ h1, h2, h3
                 {
                     z-index: 8;
                     position: absolute;
+                    right: auto;
                     background: $couleur-tertiaire;
-                    color: #008766;
+                    color: $Couleur-tertiaireDarken;
                     width: 80px;
                     padding: 5px;
                     text-align: center;
@@ -293,35 +330,21 @@ h1, h2, h3
                 }
                 .Coeur
                 {
-                    &__Vide
+                    font-size: 25px;
+                    color: white;
+                    -webkit-text-stroke: 2px;
+                    -webkit-text-stroke-color: black;
+                    &:hover 
                     {
-                        display: block;
-                        font-size: 20px;
-                        color: black;
-                    }
-                    &__Plein
-                    {
-                        display: none;
-            
+                        background:-webkit-linear-gradient(top, $couleur-primaire 30%, $couleur-secondaire 70%);
+                        background-clip:text;
+                        -webkit-background-clip:text;
+                        color:transparent;
+                        -webkit-text-stroke: 0;
                     }
                 }
 
-                .Coeur--Lien, .Coeur--Lien:hover, .Coeur--Lien:visited 
-                {
-                    text-decoration: none;
-                    .Coeur__Vide
-                    {
-                        display: none;
-                    }
-                    .Coeur__Plein
-                    {
-                        text-decoration: none;
-                        display: block;
-                        font-size: 20px;
-                        color: linear-gradient(to $couleur-secondaire, $couleur-secondaire);
-                        
-                    }
-                }
+                
             }
         }
     }
@@ -357,43 +380,28 @@ h1, h2, h3
             align-items: center;
             h2 
             {
-                font-family: 'Shrikhand';
+                font-family: Shrikhand;
                 margin-left: 35px;
                 margin-top: 50px;
+                font-size: 30px;
             }
             .Coeur
-            {   
-                &__Vide
                 {
                     font-size: 30px;
+                    margin-top: 20px;
                     margin-right: 50px;
-                    margin-top: 25px;
-                    display: block;
-                    font-size: 20px;
-                    color: black;
+                    color: white;
+                    -webkit-text-stroke: 2px;
+                    -webkit-text-stroke-color: black;
+                    &:hover
+                    {
+                        background:-webkit-linear-gradient(top, $couleur-primaire 30%, $couleur-secondaire 70%);
+                        background-clip:text;
+                        -webkit-background-clip:text;
+                        color:transparent;
+                        -webkit-text-stroke: 0;
+                    }
                 }
-                &__Plein
-                {
-                    display: none;
-                }
-            }
-            .Coeur--Lien, .Coeur--Lien:hover, .Coeur--Lien:visited 
-            {   
-                text-decoration: none;
-                .Coeur__Vide
-                {
-                    display: none;
-                }
-                .Coeur__Plein
-                {
-                    display: block;
-                    color: radial-gradient(circle, rgba(255,121,218,1) 64%, rgba(147,86,220,1) 100%);
-                    font-size: 30px;
-                    font-weight: bold;
-                    margin-right: 50px;
-                    margin-top: 25px;
-                }
-            }
         }
 
         .Englobe__PlatsAChoisir
@@ -435,6 +443,24 @@ h1, h2, h3
                 display: flex;
                 align-items: center;
                 overflow: hidden;
+                animation: AfficherPlat 1500ms ease-in-out both;
+                &:hover .Plat__PictoValide
+                {
+                        animation: ValidePlat 1000ms forwards cubic-bezier(.05,.71,.09,1.05);
+                }
+                &:hover .Plat__PictoValide i 
+                {
+                    transform: rotate(360deg);
+                    transition: transform 400ms;
+                    transition-delay: 100ms;
+                }
+
+                @for $i from 1 through 4 {
+                    &--#{$i} {
+                        animation-delay: 375ms * $i;
+                     }
+                }
+                
                 h3 
                 {
                     font-weight: bold;
@@ -447,10 +473,11 @@ h1, h2, h3
                 }
                 p 
                 {
-                    font-weight: 200;
+                    font-weight: lighter;
                     margin-top: 0;
                     margin-bottom: 10px;
                     padding-right: 10px;
+                   
                 }
                 .Plat__Prix
                 {
@@ -458,6 +485,7 @@ h1, h2, h3
                     margin-bottom: 10px;
                     margin-left: auto;
                     margin-top: 40px;
+                    font-weight: bold;
                 }
                 .Plat__PictoValide
                 {
@@ -473,7 +501,9 @@ h1, h2, h3
                     margin-right: -105px;
                     
                 }
+                    
             }
+           
         }
 
         .btn
@@ -485,6 +515,8 @@ h1, h2, h3
         }
     }
 
+   
+
     /* footer */
 
     .footer 
@@ -493,7 +525,7 @@ h1, h2, h3
         font-weight: 300;
         h2 
         {   
-            font-family: 'Shrikhand';
+            font-family: Shrikhand;
             padding-left: 25px;
             padding-top: 25px;
             margin: 0;
