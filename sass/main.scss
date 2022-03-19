@@ -82,7 +82,7 @@ h1, h2, h3
     margin:auto
 }
 
-@media screen and (max-width: 1500px) {
+
     
 /* header */
 
@@ -165,16 +165,18 @@ h1, h2, h3
         margin: 0;
         background: $couleur-background;
         text-align: center;
-        padding: 20px;
+        padding: 20px 20px 70px 20px;
+
         p 
         {
             font-weight:lighter;
+            margin-bottom: 50px;
             
         }
         .btn
-        {
+        {   
+            text-decoration: none;
             @include btn;
-            margin-top: 20px;
             margin-bottom: 30px;
             position: relative;
             
@@ -196,6 +198,7 @@ h1, h2, h3
         {   
             display: flex;
             flex-wrap: wrap;
+            padding-right: 20px;
             justify-content: space-around;
             &__Lien
             {
@@ -208,17 +211,11 @@ h1, h2, h3
                 box-shadow: -1px 3px 15px #d6d6d6;
                 border-radius: 30px;
                 font-weight: bold;
-<<<<<<< HEAD
-                max-width: 650px;
-=======
-                width: 300px;
->>>>>>> e9a735cd33a511aa0b46910ec7b6674688c21579
+                width: 100%;
                 height: 90px;
                 display: flex;
-                justify-content:flex-start;
                 align-items: center;
-                margin: 0 0 30px 20px;
-                z-index: 1;
+                margin: 0 20px 30px 20px;
                 &__nbr
                 {
                     background: $couleur-primaire;
@@ -236,6 +233,7 @@ h1, h2, h3
                     display: flex;
                     align-items: center;
                     margin-left: 20px;
+                    margin-right: 10px;
                 }
 
             
@@ -285,12 +283,11 @@ h1, h2, h3
             
             .ChoixRestaurant
             {
-                width: 450px;
+                width: 40%;
                 border-radius: 20px;
                 background: white;
                 box-shadow: -1px 3px 15px #d6d6d6;
                 margin: 30px;
-                
                 position: relative;
                 &__Nouveau
                 {
@@ -513,6 +510,7 @@ h1, h2, h3
 
         .btn
         {
+            text-decoration: none;
             @include btn;
             margin-top: 10px;
             margin-bottom: 100px;
@@ -555,4 +553,48 @@ h1, h2, h3
             }
         }
     }
-}
+
+
+   
+    
+    
+
+    @media screen and (max-width: 992px) /* Tablette */
+    { 
+    /* Restaurants */
+        .Restaurants__Englobe
+        {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .ChoixRestaurant
+        {
+            width: 40%;
+            margin: 0;
+        }
+    }
+
+    @media screen and (max-width: 768px) /* Smartphone */
+    { 
+    
+    /* Fonctionnement */
+
+        .Fonctionnement
+        {
+            &__Englobe
+            {   
+                display: block;
+                flex-wrap: nowrap;
+            }
+        } 
+    /* Restaurants */
+        .Restaurants__Englobe
+        {
+           .ChoixRestaurant
+            {
+                width: 100%;
+                margin: 30px;
+            } 
+        }
+    }
