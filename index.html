@@ -16,10 +16,11 @@
             </header>
             <main>
                 <article>
-                    <div class="localisation">
+                    <div class="loader"></div>
+                    <form method="post" action="Ville.php" class="localisation">
                         <div><i class="fa-solid fa-location-dot localisation__picto"></i></div>
-                        <p>Paris, Belleville</p>
-                    </div>
+                        <input type="text" value="Paris, Belleville" class="localisation__Ville"/>
+                    </form>
                     <div class="Reservez">
                         <h1>Réservez le menu qui vous convient</h1>
                         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
@@ -75,13 +76,12 @@
                                         <h3>La palette du goût</h3>
                                         <p>Ménilmontant</p>
                                     </div>
-                                    
-                                    <div class="Coeur">
-                                        <a href="#" class="Coeur--Lien">
-                                            <i class="fa-solid fa-heart"></i>
-                                        </a>
-                                    </div>
-                                    
+                                    <a href="" class="Coeur--Lien">
+                                        <div class="Coeur">
+                                            <i class="fa-regular fa-heart Coeur__Vide"></i>
+                                            <i class="fa-solid fa-heart Coeur__Plein"></i>
+                                        </div>
+                                    </a>
                                 </figcaption>
                             </figure>
                         </a>
@@ -156,7 +156,7 @@
                     <a href="#" class="footer__Englobe__Lien">
                         <p>Mentions légales</p>
                     </a>
-                    <a href="#" class="footer__Englobe__Lien">
+                    <a href="mailto:ohmyfood@mail.fr" class="footer__Englobe__Lien">
                         <p>Contact</p>
                     </a>
                 </div>
