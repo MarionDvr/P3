@@ -36,6 +36,14 @@
     opacity: 0;
   }
 }
+@keyframes Coeur {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 body {
   font-family: Roboto;
   color: #353535;
@@ -101,7 +109,7 @@ h1, h2, h3 {
 }
 
 .loader {
-  animation: loadspinner 4s linear forwards;
+  animation: loadspinner 3s linear forwards;
   border: solid 2vmin transparent;
   border-radius: 50%;
   border-right-color: #9356DC;
@@ -251,8 +259,6 @@ h1, h2, h3 {
   background: #f6f6f6;
   padding-top: 30px;
   padding-bottom: 40px;
-  /* Pages restaurant */
-  /* footer */
 }
 .Restaurants h2 {
   margin-left: 7%;
@@ -323,23 +329,26 @@ h1, h2, h3 {
   -webkit-background-clip: text;
   color: transparent;
 }
-.Restaurants__Englobe .ChoixRestaurant .Coeur:hover__Vide {
-  opacity: 0;
+.Restaurants__Englobe .ChoixRestaurant .Coeur__Vide:hover {
+  animation: Coeur 2500ms forwards ease-in reverse;
 }
-.Restaurants__Englobe .ChoixRestaurant .Coeur:hover__Plein {
-  opacity: 1;
+.Restaurants__Englobe .ChoixRestaurant .Coeur__Plein:hover {
+  animation: Coeur 2500ms forwards ease-in;
 }
-.Restaurants .imgRestaurant {
+
+/* Pages restaurant */
+.imgRestaurant {
   width: 100%;
   margin: 0;
   z-index: 3;
 }
-.Restaurants .imgRestaurant__photo {
+.imgRestaurant__photo {
   width: 100%;
   max-height: 250px;
   object-fit: cover;
 }
-.Restaurants .Menu {
+
+.Menu {
   position: relative;
   width: 100%;
   margin-top: -50px;
@@ -348,43 +357,51 @@ h1, h2, h3 {
   display: flex;
   flex-direction: column;
 }
-.Restaurants .Menu__NomRestaurant {
+.Menu__NomRestaurant {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.Restaurants .Menu__NomRestaurant h2 {
+.Menu__NomRestaurant h2 {
   font-family: Shrikhand;
   margin-left: 35px;
   margin-top: 50px;
   font-size: 30px;
 }
-.Restaurants .Menu__NomRestaurant .Coeur {
+.Menu__NomRestaurant .Coeur {
   font-size: 30px;
   margin-top: 20px;
   margin-right: 50px;
   color: white;
-  -webkit-text-stroke: 2px;
-  -webkit-text-stroke-color: black;
 }
-.Restaurants .Menu__NomRestaurant .Coeur:hover {
-  background: -webkit-linear-gradient(top, #9356DC 30%, #FF79DA 70%);
+.Menu__NomRestaurant .Coeur__Vide {
+  background: white;
+  position: absolute;
+  color: black;
+}
+.Menu__NomRestaurant .Coeur__Plein {
+  background-image: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  -webkit-text-stroke: 0;
 }
-.Restaurants .Menu .Englobe__PlatsAChoisir {
+.Menu__NomRestaurant .Coeur__Vide:hover {
+  animation: Coeur 2500ms forwards ease-in reverse;
+}
+.Menu__NomRestaurant .Coeur__Plein:hover {
+  animation: Coeur 2500ms forwards ease-in;
+}
+.Menu .Englobe__PlatsAChoisir {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 3%;
 }
-.Restaurants .Menu .PlatsAChoisir {
+.Menu .PlatsAChoisir {
   margin: 10px 20px 20px 20px;
   width: 360px;
 }
-.Restaurants .Menu .PlatsAChoisir h3 {
+.Menu .PlatsAChoisir h3 {
   font-weight: 200;
   font-size: 16px;
   border-bottom: solid 3px #99E2D0;
@@ -392,11 +409,11 @@ h1, h2, h3 {
   padding-bottom: 5px;
   text-transform: uppercase;
 }
-.Restaurants .Menu .PlatsAChoisir__lien {
+.Menu .PlatsAChoisir__lien {
   text-decoration: none;
   color: #353535;
 }
-.Restaurants .Menu .PlatsAChoisir__Plat {
+.Menu .PlatsAChoisir__Plat {
   background: white;
   max-width: 100%;
   border-radius: 20px;
@@ -409,34 +426,34 @@ h1, h2, h3 {
   overflow: hidden;
   animation: AfficherPlat 1500ms ease-in-out both;
 }
-.Restaurants .Menu .PlatsAChoisir__Plat:hover .Plat__PictoValide, .Restaurants .Menu .PlatsAChoisir__Plat:hover .Plat__Prix {
+.Menu .PlatsAChoisir__Plat:hover .Plat__PictoValide, .Menu .PlatsAChoisir__Plat:hover .Plat__Prix {
   animation: ValidePlat 1200ms forwards cubic-bezier(0.05, 0.71, 0.09, 1.05);
 }
-.Restaurants .Menu .PlatsAChoisir__Plat:hover .Plat__PictoValide i {
+.Menu .PlatsAChoisir__Plat:hover .Plat__PictoValide i {
   transform: rotate(360deg);
   transition: transform 400ms;
   transition-delay: 100ms;
 }
-.Restaurants .Menu .PlatsAChoisir__Plat:hover p {
+.Menu .PlatsAChoisir__Plat:hover p {
   width: 160px;
   padding-right: 40px;
 }
-.Restaurants .Menu .PlatsAChoisir__Plat:hover h3 {
+.Menu .PlatsAChoisir__Plat:hover h3 {
   width: 240px;
 }
-.Restaurants .Menu .PlatsAChoisir__Plat--1 {
+.Menu .PlatsAChoisir__Plat--1 {
   animation-delay: 375ms;
 }
-.Restaurants .Menu .PlatsAChoisir__Plat--2 {
+.Menu .PlatsAChoisir__Plat--2 {
   animation-delay: 750ms;
 }
-.Restaurants .Menu .PlatsAChoisir__Plat--3 {
+.Menu .PlatsAChoisir__Plat--3 {
   animation-delay: 1125ms;
 }
-.Restaurants .Menu .PlatsAChoisir__Plat--4 {
+.Menu .PlatsAChoisir__Plat--4 {
   animation-delay: 1500ms;
 }
-.Restaurants .Menu .PlatsAChoisir__Plat h3 {
+.Menu .PlatsAChoisir__Plat h3 {
   font-weight: bold;
   font-size: 18px;
   margin: 7px 10px 0 0;
@@ -448,7 +465,7 @@ h1, h2, h3 {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.Restaurants .Menu .PlatsAChoisir__Plat p {
+.Menu .PlatsAChoisir__Plat p {
   font-weight: lighter;
   margin: 0 0 10px 0;
   width: 280px;
@@ -457,11 +474,11 @@ h1, h2, h3 {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.Restaurants .Menu .PlatsAChoisir__Plat .Plat__Prix {
+.Menu .PlatsAChoisir__Plat .Plat__Prix {
   margin: 45px 10% 20px 10px;
   font-weight: bold;
 }
-.Restaurants .Menu .PlatsAChoisir__Plat .Plat__PictoValide {
+.Menu .PlatsAChoisir__Plat .Plat__PictoValide {
   background: #99E2D0;
   color: white;
   font-size: 30px;
@@ -473,7 +490,7 @@ h1, h2, h3 {
   align-items: center;
   margin-right: -100px;
 }
-.Restaurants .Menu .btn {
+.Menu .btn {
   text-decoration: none;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   color: white;
@@ -488,59 +505,60 @@ h1, h2, h3 {
   margin-bottom: 100px;
   align-self: center;
 }
-.Restaurants .Menu .btn:hover {
+.Menu .btn:hover {
   background: linear-gradient(to bottom right, #ff9de4, #a674e2);
   box-shadow: 0px 2px 10px #6e6e6e;
 }
-.Restaurants .footer {
+
+/* footer */
+.footer {
   background: #353535;
   font-weight: 300;
 }
-.Restaurants .footer h2 {
+.footer h2 {
   font-family: Shrikhand;
   padding-left: 25px;
   padding-top: 25px;
   margin: 0;
   color: white;
 }
-.Restaurants .footer__Englobe {
+.footer__Englobe {
   padding: 10px 25px 25px 25px;
 }
-.Restaurants .footer__Englobe__Lien {
+.footer__Englobe--Lien {
   text-decoration: none;
   color: white;
 }
-.Restaurants .footer__Englobe__Pictotexte {
+.footer__Englobe__Pictotexte {
   display: flex;
   align-items: center;
   font-weight: bold;
 }
-.Restaurants .footer__Englobe__Pictotexte .Pictofooter {
+.footer__Englobe__Pictotexte .Pictofooter {
   padding-right: 10px;
 }
+
 @media screen and (max-width: 992px) {
-  .Restaurants {
-    /* Restaurants */
-  }
-  .Restaurants .Restaurants__Englobe {
+  /* Restaurants */
+  .Restaurants__Englobe {
     display: flex;
     flex-wrap: wrap;
   }
-  .Restaurants .ChoixRestaurant {
+
+  .ChoixRestaurant {
     width: 40%;
     margin: 0;
   }
 }
 @media screen and (max-width: 768px) {
-  .Restaurants {
-    /* Fonctionnement */
-    /* Restaurants */
-  }
-  .Restaurants .Fonctionnement__Englobe {
+  /* Fonctionnement */
+  .Fonctionnement__Englobe {
     display: block;
     flex-wrap: nowrap;
   }
-  .Restaurants .Restaurants__Englobe .ChoixRestaurant {
+
+  /* Restaurants */
+  .Restaurants__Englobe .ChoixRestaurant {
     width: 100%;
     margin: 30px;
   }
