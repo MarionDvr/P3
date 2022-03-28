@@ -575,6 +575,9 @@ h1, h2, h3 {
 }
 @media screen and (max-width: 768px) {
   /* Fonctionnement */
+  .Fonctionnement h2 {
+    margin-left: 0;
+  }
   .Fonctionnement__Englobe {
     display: block;
     flex-wrap: nowrap;

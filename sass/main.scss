@@ -680,6 +680,10 @@ h1, h2, h3
     /* Fonctionnement */
     .Fonctionnement
     {
+        h2 
+        {
+            margin-left: 0;
+        }
         &__Englobe
         {   
             display: block;
