@@ -577,6 +577,7 @@ h1, h2, h3 {
   /* Fonctionnement */
   .Fonctionnement h2 {
     margin-left: 0;
+    margin-bottom: 20px;
   }
   .Fonctionnement__Englobe {
     display: block;
@@ -586,12 +587,14 @@ h1, h2, h3 {
   /* Restaurants */
   .Restaurants__Englobe--Lien {
     width: 100%;
+    margin: 0;
   }
 
   .Restaurants__Englobe {
     flex-wrap: nowrap;
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
   }
   .Restaurants__Englobe .ChoixRestaurant {
     max-width: none;
