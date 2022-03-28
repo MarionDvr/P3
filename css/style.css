@@ -601,10 +601,14 @@ h1, h2, h3 {
 
   /* Plats à choisir */
   .Menu {
-    width: 90%;
+    width: 100%;
+    margin-right: 0;
+  }
+  .Menu__NomRestaurant {
     padding: 0 20px 20px 20px;
   }
   .Menu__NomRestaurant h2 {
+    letter-spacing: 1.5px;
     padding-right: 10px;
     margin-right: auto;
     margin-left: 2%;

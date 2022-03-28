@@ -712,12 +712,14 @@ h1, h2, h3
     
     .Menu
     { 
-        width: 90%;
-        padding: 0 20px 20px 20px;
+        width: 100%;
+        margin-right: 0;
         &__NomRestaurant
         {
+            padding: 0 20px 20px 20px;
             h2 
             {
+                letter-spacing: 1.5px;
                 padding-right: 10px;
                 margin-right: auto;
                 margin-left: 2%;
