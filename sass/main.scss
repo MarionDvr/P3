@@ -106,11 +106,16 @@ h1, h2, h3
     color: black;
 }
 
-.container
+.container__Accueil
 {
     max-width: 1280px;
     margin:auto;
     animation: Loading 3000ms;
+}
+.container__Restaurants
+{
+    max-width: 1280px;
+    margin:auto;
 }
 
 
@@ -467,7 +472,7 @@ h1, h2, h3
             h2 
             {
                 font-family: Shrikhand;
-                margin-left: 35px;
+                margin-left: 50px;
                 margin-top: 50px;
                 font-size: 30px;
             }
@@ -477,10 +482,10 @@ h1, h2, h3
                 font-size: 30px;
                 margin-top: 20px;
                 margin-right: 50px;
-                color: white;
+                color: $couleur-background;
                 &__Vide
                 {
-                    background: white;
+                    background: $couleur-background;
                     position: absolute;
                     color: black;
                 }
@@ -703,6 +708,22 @@ h1, h2, h3
     
     .Menu
     { 
+        width: 90%;
+        padding: 0 20px 20px 20px;
+        &__NomRestaurant
+        {
+            h2 
+            {
+                padding-right: 10px;
+                margin-right: auto;
+                margin-left: 2%;
+                width: 100%;
+            }
+            .Coeur
+            {
+                margin-right: 10%;
+            }
+        }
         .PlatsAChoisir
         {
             &__Plat

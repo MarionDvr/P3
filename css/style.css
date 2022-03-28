@@ -66,10 +66,15 @@ h1, h2, h3 {
   color: black;
 }
 
-.container {
+.container__Accueil {
   max-width: 1280px;
   margin: auto;
   animation: Loading 3000ms;
+}
+
+.container__Restaurants {
+  max-width: 1280px;
+  margin: auto;
 }
 
 /* header */
@@ -381,7 +386,7 @@ h1, h2, h3 {
 }
 .Menu__NomRestaurant h2 {
   font-family: Shrikhand;
-  margin-left: 35px;
+  margin-left: 50px;
   margin-top: 50px;
   font-size: 30px;
 }
@@ -390,10 +395,10 @@ h1, h2, h3 {
   font-size: 30px;
   margin-top: 20px;
   margin-right: 50px;
-  color: white;
+  color: #f6f6f6;
 }
 .Menu__NomRestaurant .Coeur__Vide {
-  background: white;
+  background: #f6f6f6;
   position: absolute;
   color: black;
 }
@@ -592,6 +597,19 @@ h1, h2, h3 {
   }
 
   /* Plats à choisir */
+  .Menu {
+    width: 90%;
+    padding: 0 20px 20px 20px;
+  }
+  .Menu__NomRestaurant h2 {
+    padding-right: 10px;
+    margin-right: auto;
+    margin-left: 2%;
+    width: 100%;
+  }
+  .Menu__NomRestaurant .Coeur {
+    margin-right: 10%;
+  }
   .Menu .PlatsAChoisir__Plat {
     padding-right: 20px;
   }
