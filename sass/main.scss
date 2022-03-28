@@ -79,6 +79,19 @@ $degradeLight: linear-gradient(to bottom right, lighten($couleur-secondaire, $li
     }
 }
 
+@keyframes Loading {
+    0%{
+        opacity: 0;
+    }
+    99%{
+        opacity:0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+
 
 
 body
@@ -96,7 +109,8 @@ h1, h2, h3
 .container
 {
     max-width: 1280px;
-    margin:auto
+    margin:auto;
+    animation: Loading 3000ms;
 }
 
 
@@ -339,7 +353,7 @@ h1, h2, h3
             }
             .ChoixRestaurant
             {
-                width: 40%;
+                width: 100%;
                 border-radius: 20px;
                 background: white;
                 box-shadow: -1px 3px 15px #d6d6d6;
@@ -453,6 +467,7 @@ h1, h2, h3
             }
             .Coeur
             {
+                cursor: pointer;
                 font-size: 30px;
                 margin-top: 20px;
                 margin-right: 50px;
@@ -637,12 +652,17 @@ h1, h2, h3
     {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 7%;
+        .ChoixRestaurant
+        {
+            
+            max-width: 340px;
+            margin: 20px 10px 20px 10px;
+            
+        }
     }
-    .ChoixRestaurant
-    {
-        width: 40%;
-        margin: 0;
-    }
+    
 }
 
 @media screen and (max-width: 768px) /* Smartphone */
@@ -659,14 +679,38 @@ h1, h2, h3
     /* Restaurants */
     .Restaurants__Englobe
     {
+        flex-wrap: nowrap;
+        display: flex;
+        flex-direction: column;
         .ChoixRestaurant
         {
-            width: 100%;
-            margin: 30px;
+            width: 90%;
+            margin: 20px;
         } 
     }
     
+    /* Plats à choisir */
+    
+    .Menu
+    { 
+        .PlatsAChoisir
+        {
+            &__Plat
+            {
+                padding-right: 20px;
+                &:hover h3
+                {
+                    width: 240px;
+                }
+                &:hover p  
+                {
+                    width: 160px;
+                }
 
+            }
+        }
+    }
+    
 }
 
     
