@@ -212,7 +212,7 @@ h1, h2, h3 {
   padding: 30px;
 }
 .Fonctionnement h2 {
-  margin-left: 5%;
+  margin: 0 0 40px 5%;
 }
 .Fonctionnement__Englobe {
   display: flex;
@@ -223,6 +223,7 @@ h1, h2, h3 {
 .Fonctionnement__Englobe__Lien {
   text-decoration: none;
   color: black;
+  margin: 0 20px 20px 20px;
 }
 .Fonctionnement__Englobe__etapes {
   background: #f6f6f6;
@@ -233,7 +234,6 @@ h1, h2, h3 {
   height: 90px;
   display: flex;
   align-items: center;
-  margin: 0 20px 30px 20px;
 }
 .Fonctionnement__Englobe__etapes__nbr {
   background: #9356DC;
@@ -277,21 +277,24 @@ h1, h2, h3 {
   margin-left: 7%;
 }
 .Restaurants__Englobe {
-  margin: 0 0;
+  margin: 40px 7% 7% 7%;
   display: flex;
-  justify-content: center;
+  justify-content: none;
   flex-wrap: wrap;
+  width: 90%;
 }
-.Restaurants__Englobe__lien {
+.Restaurants__Englobe--Lien {
   text-decoration: none;
   color: black;
+  margin: 0 40px 40px 0;
+  width: 45%;
 }
 .Restaurants__Englobe .ChoixRestaurant {
   width: 100%;
   border-radius: 20px;
   background: white;
   box-shadow: -1px 3px 15px #d6d6d6;
-  margin: 30px;
+  margin: 0;
   position: relative;
 }
 .Restaurants__Englobe .ChoixRestaurant__Nouveau {
@@ -327,6 +330,7 @@ h1, h2, h3 {
 }
 .Restaurants__Englobe .ChoixRestaurant__Figcap p {
   font-weight: lighter;
+  color: #353535;
 }
 .Restaurants__Englobe .ChoixRestaurant .Coeur {
   font-size: 25px;
@@ -554,15 +558,14 @@ h1, h2, h3 {
 
 @media screen and (max-width: 992px) {
   /* Restaurants */
-  .Restaurants__Englobe {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 7%;
+  .Restaurants__Englobe--Lien {
+    width: 43%;
+    margin: 0 30px 30px 0;
   }
+
   .Restaurants__Englobe .ChoixRestaurant {
-    max-width: 340px;
-    margin: 20px 10px 20px 10px;
+    max-width: none;
+    width: 100%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -573,14 +576,19 @@ h1, h2, h3 {
   }
 
   /* Restaurants */
+  .Restaurants__Englobe--Lien {
+    width: 100%;
+  }
+
   .Restaurants__Englobe {
     flex-wrap: nowrap;
     display: flex;
     flex-direction: column;
   }
   .Restaurants__Englobe .ChoixRestaurant {
+    max-width: none;
     width: 90%;
-    margin: 20px;
+    margin: 20px 20px 20px 0;
   }
 
   /* Plats à choisir */

@@ -263,7 +263,7 @@ h1, h2, h3
         padding: 30px;
         h2
         {
-            margin-left: 5%;
+            margin: 0 0 40px 5%;
         }
         &__Englobe
         {   
@@ -275,6 +275,7 @@ h1, h2, h3
             {
                 text-decoration: none;
                 color: black;
+                margin: 0 20px 20px 20px;
             }
             &__etapes
             {
@@ -286,7 +287,7 @@ h1, h2, h3
                 height: 90px;
                 display: flex;
                 align-items: center;
-                margin: 0 20px 30px 20px;
+                
                 &__nbr
                 {
                     background: $couleur-primaire;
@@ -342,22 +343,26 @@ h1, h2, h3
         }
         &__Englobe
         {   
-            margin: 0 0;
+            margin: 40px 7% 7% 7%;
             display: flex;
-            justify-content: center;
+            justify-content: none;
             flex-wrap: wrap;
-            &__lien
+            width: 90%;
+            &--Lien
             {   
                 text-decoration: none;
                 color: black;
+                margin:0 40px 40px 0;
+                width: 45%;
             }
+           
             .ChoixRestaurant
             {
                 width: 100%;
                 border-radius: 20px;
                 background: white;
                 box-shadow: -1px 3px 15px #d6d6d6;
-                margin: 30px;
+                margin: 0;
                 position: relative;
                 &__Nouveau
                 {
@@ -396,6 +401,7 @@ h1, h2, h3
                     p 
                     {
                         font-weight: lighter;
+                        color: $couleur-textes;
                     }
                 }
                 .Coeur
@@ -648,19 +654,18 @@ h1, h2, h3
 @media screen and (max-width: 992px) /* Tablette */
 { 
     /* Restaurants */
+    .Restaurants__Englobe--Lien
+    {
+        width: 43%;
+        margin: 0 30px 30px 0;
+    }
     .Restaurants__Englobe
     {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin: 7%;
         .ChoixRestaurant
         {
-            
-            max-width: 340px;
-            margin: 20px 10px 20px 10px;
-            
-        }
+            max-width: none;
+            width: 100%;
+        } 
     }
     
 }
@@ -677,6 +682,10 @@ h1, h2, h3
         }
     } 
     /* Restaurants */
+    .Restaurants__Englobe--Lien
+    {
+        width: 100%;
+    }
     .Restaurants__Englobe
     {
         flex-wrap: nowrap;
@@ -684,8 +693,9 @@ h1, h2, h3
         flex-direction: column;
         .ChoixRestaurant
         {
+            max-width: none;
             width: 90%;
-            margin: 20px;
+            margin: 20px 20px 20px 0;
         } 
     }
     
