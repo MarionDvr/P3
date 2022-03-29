@@ -34,7 +34,7 @@
   }
   100% {
     transform: rotate(3turn);
-    opacity: 0;
+    visibility: hidden;
   }
 }
 @keyframes Coeur {
