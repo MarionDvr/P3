@@ -141,7 +141,7 @@ h1, h2, h3 {
   z-index: 1;
 }
 .loader:before {
-  animation: loadspinner 4s linear forwards;
+  animation: loadspinner 3s linear forwards;
   border: solid 2vmin transparent;
   border-radius: 50%;
   border-right-color: #FF79DA;
@@ -155,7 +155,7 @@ h1, h2, h3 {
   width: 16vmin;
 }
 .loader:after {
-  animation: loadspinner 4s linear forwards;
+  animation: loadspinner 3s linear forwards;
   border: solid 2vmin transparent;
   border-radius: 50%;
   border-right-color: #99E2D0;
